@@ -1,7 +1,7 @@
 
 Run:
 ```shell
-sudo docker-compose up --build
+sudo docker-compose up
 ```
 
 Visit [localhost](http://localhost)

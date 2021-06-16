@@ -4,21 +4,19 @@ networks:
 
 services:
   db_server:
+    container_name: db_server
     build:
       context: nodes/db_server
     ports:
       - "7000:7000"
-    environment:
-      container: database_server
     networks:
       - group
 
   web_server:
+    container_name: web_server
     build:
       context: nodes/web_server
     ports:
       - "80:5000"
-    environment:
-      container: web_server
     networks:
       - group
