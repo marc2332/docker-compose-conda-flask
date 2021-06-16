@@ -1,0 +1,24 @@
+version: '3'
+networks:
+  group:
+
+services:
+  db_server:
+    build:
+      context: nodes/db_server
+    ports:
+      - "7000:7000"
+    environment:
+      container: database_server
+    networks:
+      - group
+
+  web_server:
+    build:
+      context: nodes/web_server
+    ports:
+      - "80:5000"
+    environment:
+      container: web_server
+    networks:
+      - group
